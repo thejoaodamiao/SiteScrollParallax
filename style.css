@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,700,800,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+section {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    background: #3586ff;
+}
+
+#naruto {
+    width: 200px;
+    position: absolute;
+    top: 260px;
+    right: 20px;
+    animation: animate 4s ease-in-out infinite;
+    animation-delay: calc(var(--i)*0.1s);
+}
+
+#sasuke {
+    position: absolute;
+    top: 240px;
+    left: 0px;
+    width: 265px;
+    animation: animate 4s ease-in-out infinite;
+}
+
+#logo {
+    display: flex;
+    width: 400px;
+    margin: auto;
+    animation: animate 4s ease-in-out infinite;
+    animation-delay: calc(var(--i)*0.5s);
+}
+
+.wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url('wave.png');
+    background-size: 1000px 100px;
+    animation: animate 4s ease-in-out infinite;
+    animation-delay: calc(var(--i)*0.25s);
+}
+
+.wave#wave1 {
+    z-index: 1000;
+    opacity: 1;
+    background-position-x: 400px;
+}
+
+.wave#wave2 {
+    z-index: 999;
+    opacity: .5;
+    background-position-x: 300px;
+}
+
+.wave#wave3 {
+    z-index: 998;
+    opacity: .2;
+    background-position-x: 200px;
+}
+
+.wave#wave4 {
+    z-index: 999;
+    opacity: .7;
+    background-position-x: 100px;
+}
+
+@keyframes animate {
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+}
+
+.sec {
+    padding: 100px;
+}
+
+.sec h2 {
+    font-size: 3em;
+    color: #111;
+}
+
+.sec p {
+    font-size: 1.2em;
+    color: #111;
+}

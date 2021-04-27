@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon shortcut" href="naruto2000px.png">
+    <title>Parallax scroll</title>
+</head>
+
+<body>
+    <section>
+        <img src="Naruto-logo-shippuuden.png" id="logo">
+        <img src="naruto2000px.png" id="naruto">
+        <img src="sasuke2000px.png" id="sasuke">
+        <div class="wave" id="wave1" style="--i:1;"></div>
+        <div class="wave" id="wave2" style="--i:2;"></div>
+        <div class="wave" id="wave3" style="--i:3;"></div>
+        <div class="wave" id="wave4" style="--i:4;"></div>
+    </section>
+    <div class="sec">
+        <h2>animated parallax</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris condimentum nibh sed ipsum gravida sodales. Vivamus non erat diam. Pellentesque libero lectus, blandit vitae metus ac, pretium malesuada elit. Nullam sodales justo lectus, eu porta
+            nunc interdum et. Aliquam elementum, enim ut iaculis pharetra, ex ipsum malesuada diam, ac imperdiet orci velit ut purus. Nunc et aliquet magna. Quisque varius viverra mi eu dapibus. Curabitur fringilla varius ullamcorper. Vivamus pharetra
+            <br><br> tincidunt bibendum. Pellentesque sapien neque, scelerisque at nisi nec, ultrices pellentesque eros. Donec eget lectus fringilla diam venenatis venenatis vel et nisl. Praesent molestie blandit arcu, vel semper neque posuere a. Ut in
+            luctus urna. Etiam placerat mi consequat, porta lorem eget, facilisis purus. Nunc eget ullamcorper massa. Proin aliquam velit tellus, sed blandit ligula aliquet vel. Maecenas vehicula libero arcu. Duis a dui vestibulum, convallis nulla hendrerit,
+            iaculis odio. Aenean elementum elementum eros. Vestibulum lobortis leo sit amet lorem iaculis, at elementum metus tincidunt. Vivamus nisl felis, pulvinar id nibh eget, tincidunt posuere metus. In tincidunt blandit sem, pretium rhoncus nibh
+            pharetra quis. Morbi aliquet, ipsum id luctus accumsan, nibh dui euismod quam, sit amet porta est enim eget enim. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc euismod in felis ac tempor. <br><br> tincidunt bibendum. Pellentesque
+            sapien neque, scelerisque at nisi nec, ultrices pellentesque eros. Donec eget lectus fringilla diam venenatis venenatis vel et nisl. Praesent molestie blandit arcu, vel semper neque posuere a. Ut in luctus urna. Etiam placerat mi consequat,
+            porta lorem eget, facilisis purus. Nunc eget ullamcorper massa. Proin aliquam velit tellus, sed blandit ligula aliquet vel. Maecenas vehicula libero arcu. Duis a dui vestibulum, convallis nulla hendrerit, iaculis odio. Aenean elementum elementum
+            eros. Vestibulum lobortis leo sit amet lorem iaculis, at elementum metus tincidunt. Vivamus nisl felis, pulvinar id nibh eget, tincidunt posuere metus. In tincidunt blandit sem, pretium rhoncus nibh pharetra quis. Morbi aliquet, ipsum id luctus
+            accumsan, nibh dui euismod quam, sit amet porta est enim eget enim. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc euismod in felis ac tempor.
+        </p>
+    </div>
+    <script type="text/javascript">
+        let wave1 = document.getElementById('wave1');
+        let wave2 = document.getElementById('wave2');
+        let wave3 = document.getElementById('wave3');
+        let wave4 = document.getElementById('wave4');
+        let naruto = document.getElementById('naruto');
+        let sasuke = document.getElementById('sasuke');
+
+        window.addEventListener('scroll', function() {
+            let value = window.scrollY;
+
+            wave1.style.backgroundPositionX = 400 + value * 4 + "px";
+            wave2.style.backgroundPositionX = 300 + value * -4 + "px";
+            wave3.style.backgroundPositionX = 200 + value * 2 + "px";
+            wave4.style.backgroundPositionX = 100 + value * -2 + "px";
+            naruto.style.right = 0 + value * 1 + 'px';
+            sasuke.style.left = 0 + value * 1 + 'px';
+        })
+    </script>
+</body>
+
+</html>
